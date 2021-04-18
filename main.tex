@@ -1,0 +1,187 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+\usepackage[english]{babel} % makes english or polish content
+\usepackage{amsmath}
+\usepackage{mnsymbol}
+\graphicspath{ {./img/} }
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+
+\pagestyle{empty}
+\begin{document}
+\newcommand{\babelPL}[1]{\ifnum\pdfstrcmp{\languagename}{polish}=0 {#1}\fi}
+\newcommand{\babelEN}[1]{\ifnum\pdfstrcmp{\languagename}{english}=0 {#1}\fi}
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Jakub}{Sielańczyk}{Java Dev / Android Dev}{white}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+% \begin{center}
+%     \roundpic{jack.jpg}
+% \end{center}
+
+\bg{cvgreen}{white}{\babelPL{Kontakt}\babelEN{Contact}} \\[0.5em]
+\href{mailto:j.a.sielanczyk@gmail.com}{j.a.sielanczyk@gmail.com} 
+537-886-459\\
+
+Preczów, \babelPL{Polska}\babelEN{Poland}\\
+
+
+\bigskip
+
+% \bg{cvgreen}{white}{Areas of specialization} \\[0.5em]
+
+% Privateering ~•~ Bucaneering ~•~ Parler ~•~ Rum
+
+% \bigskip
+
+
+
+% \bigskip
+
+% \bg{cvgreen}{white}{\babelPL{Zainteresowania}\babelEN{Interests}}\\[0.5em]
+
+% ~•~ \babelPL{Elektronika}\babelEN{Interests} 
+% ~•~ \babelPL{Mechanika}\babelEN{Interests} 
+% ~•~ \babelPL{Zainteresowania}\babelEN{Interests}
+% \babelPL{Zainteresowania}\babelEN{Interests}
+% \bigskip
+
+\bg{cvgreen}{white}{\babelPL{Zainteresowania}\babelEN{Interests}}\\[0.5em]
+~•~ \texttt{\babelPL{Programowanie}\babelEN{Programing}} \\
+~•~ \texttt{Arch Linux} \\
+~•~ \texttt{Android} \\
+~•~ \texttt{\babelPL{Elektronika}\babelEN{Electronics}(Atmega)} \\
+~•~ \texttt{\babelPL{Mechanika samochodowa}\babelEN{Car Mechanics}} \\
+
+\vspace{4em}
+
+\infobubble{\faGithub}{cvgreen}{white}{\href{https://github.com/sielus/}{sielus}}
+\infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/jakub-sielańczyk-2734011b5}{Jakub Sielańczyk}}
+
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{\babelPL{Doświadczenie}\babelEN{Experience}}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{11.2015--12.2015}{Technical Support Help Desk}{Amec Foster Wheeler}{Sosnowiec \color{cvred}}{
+    - \babelPL{Rozwiązywanie bieżących problemów zgłaszanych przez użytkowników}\babelEN{Solving current problems reported by users\newline}
+    - \babelPL{Utrzymywanie i wdrażanie nowego sprzętu komputerowego na podstawie zapotrzebowania pracowników}\babelEN{Maintaining and implementing new computer equipment based on the needs of employees}\newline
+    - \babelPL{Utrzymywanie i rozwijanie serwera w oparciu o potrzeb firmy}\babelEN{Maintaining and developing server based on the company's needs}
+    }{afw.png} \\
+\end{tabular}
+\vspace{3em}
+
+\begin{minipage}[t]{0.3\textwidth}
+\section*{\babelPL{Technologie}\babelEN{Technologies}}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{Java, JavaFX, OOP} & $\bigstar \bigstar \bigstar \bigstar \bigstar$ \\
+     \bg{skilllabelcolour}{iconcolour}{Android Studio} & $\bigstar \bigstar \bigstar \bigstar \largestar$ \\
+     \bg{skilllabelcolour}{iconcolour}{PL/SQL,SQL}   & $\bigstar \bigstar \bigstar \largestar \largestar$ \\
+     \bg{skilllabelcolour}{iconcolour}{python} & $\bigstar \bigstar \largestar \largestar \largestar$ \\
+     \bg{skilllabelcolour}{iconcolour}{git} & $\bigstar \bigstar \bigstar \largestar \largestar$ \\
+     \bg{skilllabelcolour}{iconcolour}{\LaTeX} & $\bigstar \largestar \largestar \largestar \largestar$ 
+\end{tabular}
+\end{minipage}
+
+\section*{\babelPL{Wykształcenie}\babelEN{Education}}
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2017--2022}{\babelPL{Inżynier(inż) Informatyka Stosowana}\babelEN{Engineer Applied Computer Science}}{\babelPL{Uniwersytet Śląski}\babelEN{University of Silesia}}{Katowice \color{cvred}}{}{us.png} \\
+    \cvevent{2013-2017}{\babelPL{Technik Informatyk}\babelEN{IT technician}}{Techniczne Zakłady Naukowe}{Dąbrowa Górnicza \color{cvred}}{}{tzn.png} \\
+\end{tabular}
+\vspace{3em}
+
+\begin{minipage}[t]{0.3\textwidth}
+\section*{\babelPL{Certyfikaty / Licencje}\babelEN{Certifications / Licenses}}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+    2021 & Introduction to Cybersecurity \\
+    2016 & \babelPL{Prawo Jazdy kat B}\babelEN{Driving license} \\
+
+\end{tabular}
+\bigskip
+
+\section*{\babelPL{Języki}\babelEN{Languages}}
+\begin{tabular}{l | ll}
+\textbf{\babelPL{Polski}\babelEN{Polish}} & \babelPL{Ojczysty}\babelEN{Native}\\
+\textbf{\babelPL{Angielski}\babelEN{English}} & B1
+
+\end{tabular}
+\bigskip
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{\babelPL{Publikacje}\babelEN{Publications}}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+    2021 & \href{https://play.google.com/store/apps/details?id=com.devdreams.energy.cost}{\babelPL{Koszty Energii - Fotowoltaika}\babelEN{Energy cost - Photovoltaics}} 
+\end{tabular}
+\bigskip
+
+\end{minipage}
+
+
+% \vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt} \vspace{10pt}
+\begin{minipage}[t]{\rightcolwidth}
+
+\end{minipage}
+
+\end{paracol}
+
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+    \babelPL{Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).
+    }\babelEN{I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).}
+\end{center}
+
+\end{document}
